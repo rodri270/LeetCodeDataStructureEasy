@@ -1,4 +1,7 @@
 def maxSubArray(nums) -> int:
+    negativeCheck = max(nums)
+    if negativeCheck < 0:
+        return negativeCheck
     largestNumber = nums[0]
     sizeOfList = len(nums)
     maxEndingNumber = 0
@@ -9,6 +12,8 @@ def maxSubArray(nums) -> int:
             maxEndingNumber = 0
         elif (largestNumber<maxEndingNumber):
             largestNumber = maxEndingNumber
+            
+        
     print(largestNumber)       
     return largestNumber
 
