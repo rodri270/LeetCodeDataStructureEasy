@@ -4,15 +4,12 @@ def intersect(nums1, nums2):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        newNums=[]
-        for i in range((len(nums1))):
-            for k in range(len(nums2)):
-                if nums1[i] == nums2[k]:
-                    newNums.append(nums1[i])
-                    newNums.append(nums2[k])
-        newNums=list(dict.fromkeys(newNums))
-        print(newNums)
-        return newNums
+        newNums1=[]
+        for i in nums1:
+                if i in nums2:
+                    newNums1.append(i)
+        print(newNums1)
+        return newNums1
                 
                 
         
