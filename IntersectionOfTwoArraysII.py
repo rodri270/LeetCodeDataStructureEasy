@@ -6,8 +6,9 @@ def intersect(nums1, nums2):
         """
         newNums1=[]
         for i in nums1:
-                if i in nums2:
-                    newNums1.append(i)
+            if i in nums2:
+                nums2.remove(i)
+                newNums1.append(i)
         print(newNums1)
         return newNums1
                 
